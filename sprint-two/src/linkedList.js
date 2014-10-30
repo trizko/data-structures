@@ -44,4 +44,7 @@ var makeNode = function(value){
 
 /*
  * Complexity: What is the time complexity of the above functions?
+ * list.addToTail has an O(1) time complexity
+ * list.removeHead has an O(1) time complexity
+ * list.contains has an O(n) time complexity
  */
