@@ -16,15 +16,25 @@ describe('binarySearchTree', function() {
     binarySearchTree.insert(3);
     binarySearchTree.insert(7);
     binarySearchTree.insert(6);
+    binarySearchTree.insert(8);
+    binarySearchTree.insert(9);
+    binarySearchTree.insert(10);
     expect(binarySearchTree.left.right.value).to.equal(3);
     expect(binarySearchTree.right.left.value).to.equal(6);
+    expect(binarySearchTree.right.right.value).to.equal(8);
+    expect(binarySearchTree.right.right.right.value).to.equal(9);
+    expect(binarySearchTree.right.right.right.right.value).to.equal(10);
   });
 
   it('should have a working "contains" method', function(){
     binarySearchTree.insert(2);
     binarySearchTree.insert(3);
     binarySearchTree.insert(7);
+    binarySearchTree.insert(13);
+    binarySearchTree.insert(9);
     expect(binarySearchTree.contains(7)).to.equal(true);
+    expect(binarySearchTree.contains(14)).to.equal(false);
+    expect(binarySearchTree.contains(9)).to.equal(true);
     expect(binarySearchTree.contains(8)).to.equal(false);
   });
 
